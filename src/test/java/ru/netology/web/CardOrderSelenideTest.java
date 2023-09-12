@@ -21,6 +21,6 @@ public class CardOrderSelenideTest {
         form.$("[data-test-id=phone] input").setValue("+79270000000");
         form.$("[data-test-id=agreement]").click();
         form.$("[class=button__content]").click();
-        $("[class=input__sub]").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[class=input__sub]").shouldHave(exactText("Имя и Фамилия указаные неверна. Допустимы только русские буквы, пробелы и дефисы."));
     }
 }
