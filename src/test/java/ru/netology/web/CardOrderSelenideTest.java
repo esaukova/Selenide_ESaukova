@@ -14,7 +14,6 @@ public class CardOrderSelenideTest {
     @Test
     void shouldTest() {
 
-        Configuration.headless = true;
         open("http://localhost:9999");
         SelenideElement form = $("[method=post]");
         form.$("[data-test-id=name] input").setValue("Ekaterina");
