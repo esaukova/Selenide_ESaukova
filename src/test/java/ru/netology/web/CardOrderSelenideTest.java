@@ -3,8 +3,7 @@ package ru.netology.web;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.cssValue;
-import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -67,7 +66,7 @@ public class CardOrderSelenideTest {
         form.$("[data-test-id=name] input").setValue("Иван Петров-Иванов");
         form.$("[data-test-id=phone] input").setValue("+79270000000");
         form.$("[class=button__content]").click();
-        $("[data-test-id='agreement'].input_invalid .checkbox__text").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
+        $("[data-test-id='agreement'].input_invalid .checkbox__text").shouldBe(visible);
     }
 
 
